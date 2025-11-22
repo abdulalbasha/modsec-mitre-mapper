@@ -1,0 +1,94 @@
+{
+  "mappings": [
+    {
+      "category": "Remote Code Execution (RCE)",
+      "keywords": ["rce", "command execution", "cmd.exe", "/bin/sh", "/bin/bash", "powershell", "shell_exec", "system()", "eval()", "unix-shell", "windows-shell"],
+      "mitre": { "id": "T1059", "tactic": "Execution", "name": "Command and Scripting Interpreter" },
+      "priority": 100
+    },
+    {
+      "category": "SQL Injection (SQLi)",
+      "keywords": ["sqli", "sql injection", "sql-injection", "union select", "blind sql", "information_schema", "hex(", "char(", "drop table", "--", "xp_cmdshell"],
+      "mitre": { "id": "T1190", "tactic": "Initial Access", "name": "Exploit Public-Facing Application" },
+      "priority": 95
+    },
+    {
+      "category": "Cross-Site Scripting (XSS)",
+      "keywords": ["xss", "cross-site", "scripting", "javascript", "alert(", "document.cookie", "onerror", "onload", "<script>", "xss-reflected", "xss-stored"],
+      "mitre": { "id": "T1059.007", "tactic": "Execution", "name": "Command and Scripting Interpreter: JavaScript" },
+      "priority": 90
+    },
+    {
+      "category": "Java/Deserialization Attacks",
+      "keywords": ["java", "jndi", "ldap", "rmi", "log4j", "log4shell", "serialization", "objectinputstream", "struts", "spring", "beans"],
+      "mitre": { "id": "T1190", "tactic": "Initial Access", "name": "Exploit Public-Facing Application" },
+      "priority": 95
+    },
+    {
+      "category": "XML External Entity (XXE)",
+      "keywords": ["xxe", "xml", "entity", "system entity", "public entity", "!entity", "soap-envelope"],
+      "mitre": { "id": "T1190", "tactic": "Initial Access", "name": "Exploit Public-Facing Application" },
+      "priority": 85
+    },
+    {
+      "category": "Local File Inclusion (LFI) / Path Traversal",
+      "keywords": ["lfi", "path traversal", "directory traversal", "dot-dot", "../", "..\\", "/etc/passwd", "boot.ini", "win.ini", "local file"],
+      "mitre": { "id": "T1083", "tactic": "Discovery", "name": "File and Directory Discovery" },
+      "priority": 80
+    },
+    {
+      "category": "Remote File Inclusion (RFI)",
+      "keywords": ["rfi", "remote file", "mosi", "http://", "https://", "ftp://", "php://input"],
+      "mitre": { "id": "T1105", "tactic": "Command and Control", "name": "Ingress Tool Transfer" },
+      "priority": 90
+    },
+    {
+      "category": "Server Side Request Forgery (SSRF)",
+      "keywords": ["ssrf", "metadata", "169.254.169.254", "internal network", "aws-metadata"],
+      "mitre": { "id": "T1190", "tactic": "Initial Access", "name": "Exploit Public-Facing Application" },
+      "priority": 85
+    },
+    {
+      "category": "Session & Auth Attacks",
+      "keywords": ["session", "fixation", "hijacking", "cookie", "brute force", "credential", "login failure", "password", "auth-failed"],
+      "mitre": { "id": "T1110", "tactic": "Credential Access", "name": "Brute Force" },
+      "priority": 70
+    },
+    {
+      "category": "PHP Injection",
+      "keywords": ["php", "wrapper", "auto_prepend_file", "allow_url_include", "php://"],
+      "mitre": { "id": "T1190", "tactic": "Initial Access", "name": "Exploit Public-Facing Application" },
+      "priority": 90
+    },
+    {
+      "category": "Protocol Violations",
+      "keywords": ["protocol", "violation", "http request smuggling", "content-length", "transfer-encoding", "malformed", "boundary", "range header"],
+      "mitre": { "id": "T1071", "tactic": "Command and Control", "name": "Application Layer Protocol" },
+      "priority": 40
+    },
+    {
+      "category": "Denial of Service (DoS)",
+      "keywords": ["dos", "denial", "flood", "timeout", "resource limit", "slowloris", "connection limit"],
+      "mitre": { "id": "T1498", "tactic": "Impact", "name": "Network Denial of Service" },
+      "priority": 60
+    },
+    {
+      "category": "Automated Scanners & Bots",
+      "keywords": ["scanner", "crawler", "bot", "spider", "acunetix", "nessus", "nmap", "nikto", "burp", "automation", "user-agent"],
+      "mitre": { "id": "T1595.002", "tactic": "Reconnaissance", "name": "Active Scanning: Vulnerability Scanning" },
+      "priority": 30
+    },
+    {
+      "category": "Information Leakage",
+      "keywords": ["leakage", "disclosure", "stack trace", "error message", "listing", "directory listing", "source code"],
+      "mitre": { "id": "T1592", "tactic": "Reconnaissance", "name": "Gather Victim Host Information" },
+      "priority": 20
+    },
+    {
+      "category": "File Upload Attacks",
+      "keywords": ["upload", "file upload", "multipart", "executable"],
+      "mitre": { "id": "T1505.003", "tactic": "Persistence", "name": "Server Software Component: Web Shell" },
+      "priority": 85
+    }
+  ]
+}
